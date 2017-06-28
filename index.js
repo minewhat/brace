@@ -1030,6 +1030,11 @@ exports.hasCssString = function(id, doc) {
 
 exports.importCssString = function importCssString(cssText, id, doc) {
     doc = doc || document;
+    
+   if(!id)id=""
+
+    id = "cai-ace-css"+id;
+    
     if (id && exports.hasCssString(id, doc))
         return null;
     
